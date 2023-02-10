@@ -1,0 +1,215 @@
+/* Variables */
+:root {
+
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html {
+ font-size: 62.5%; 
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* General */
+
+body {
+    background-color: #0d1a2d;
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    background-color: #15273e;
+    max-width: 300px;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0px 0px 30px 10px rgba(0,0,0,.15);
+}
+
+.nft {
+    width: 300px;
+    height: 300px;
+    border-radius: 2.5em;
+    padding: 20px;
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.content .title {
+    color: white;
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.content .desc {
+    color: #8fa9ca;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 15px;
+}
+
+.eth-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.clock-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+}
+
+.price .eth {
+    color: aqua;
+}
+
+.price .date {
+    color: #8fa9ca;
+}
+
+.price .eth, .price .date {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+hr {
+    border: 1px solid #22344c;
+    margin: 0 20px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-top: 15px;
+    gap: 1.5rem;
+}
+
+.avatar .avatar-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+
+.avatar .avatar-link, .watermark .fm-link, .watermark .author-link {
+    text-decoration: none;
+    color: white;
+}
+
+.avatar .avatar-link:hover, .content .title:hover, .watermark .fm-link:hover, .watermark .author-link:hover {
+  color: aqua;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.avatar .avatar-desc {
+    font-size: 1.5rem;
+}
+
+.avatar .avatar-desc.creation {
+    color: #8fa9ca;
+}
+
+.watermark {
+  text-align: center;
+}
+
+.watermark .author {
+  font-size: 1.4rem;
+}
+
+.watermark .author span {
+  color: #8fa9ca;
+}
+
+/* Animations */
+
+.modal:hover .nft {
+    color: #24c0c3;
+    opacity: 1;
+    cursor: pointer;
+}
+
+
